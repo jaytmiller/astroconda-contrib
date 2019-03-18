@@ -1,5 +1,5 @@
 {% set name = 'stsci.skypac' %}
-{% set version = '0.9.15' %}
+{% set version = '1.0.2' %}
 {% set number = '0' %}
 
 about:
@@ -9,7 +9,7 @@ about:
 
 build:
     number: {{ number }}
-    preserve_egg_dir: 'yes'
+    skip: true  # [py2k]
 
 package:
     name: {{ name }}
@@ -17,21 +17,21 @@ package:
 
 requirements:
     build:
-    - astropy >=1.1
+    - astropy >=3.1
     - stsci.imagestats
     - spherical-geometry >=1.2.2
     - stsci.tools
     - stwcs
-    - sphinx
     - setuptools
     - numpy {{ numpy }}
     - python {{ python }}
     run:
-    - astropy >=1.1
+    - astropy >=3.1
     - stsci.imagestats
     - spherical-geometry >=1.2.2
     - stsci.tools
     - stwcs
+    - numpy
     - python
 
 source:

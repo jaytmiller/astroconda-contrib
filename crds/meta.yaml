@@ -1,5 +1,5 @@
 {% set name = 'crds' %}
-{% set version = '7.2.9' %}
+{% set version = '7.3.0' %}
 {% set number = '0' %}
 
 about:
@@ -12,6 +12,7 @@ about:
 build:
     number: {{ number }}
     preserve_egg_dir: 'no'
+    skip: True [py2k]
 
 package:
     name: {{ name }}
